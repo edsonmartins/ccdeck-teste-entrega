@@ -1,0 +1,11 @@
+name: ci
+on: [pull_request]
+jobs:
+  passa:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 20 && echo ok
+  falha:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 30 && echo "falha de propósito" && exit 1
